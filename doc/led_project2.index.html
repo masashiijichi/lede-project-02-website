@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>What if aliens use ChatGPT to study earth?</title>
 
     <!-- Open Graph Metadata -->
@@ -14,17 +14,16 @@
     <meta name="twitter:creator" content="@" />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="scrolly_style.css" rel="stylesheet" />
+    <link href="scrolly_style.css" rel="stylesheet">
     <script data-react-helmet="true" src="cursor_majic_abc.js" type="text/javascript" defer=""></script>
-
     <!-- Lightbox2 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
@@ -37,23 +36,21 @@
             text-rendering: optimizeLegibility;
             background-color: #000; /* Ensure black background */
             color: #f4f4f4; /* Light text color */
+            background-size: cover;
             height: 100%;
             width: 100%;
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
-
         .content {
             max-width: 640px;
             margin: auto;
             background-color: #000; /* Ensure black background */
         }
-
         /* Margin on mobile */
         @media (max-width: 640px) {
             body {
                 font-size: 18px;
             }
-
             .content {
                 margin: 0 0.5em;
                 padding-left: 0.5em;
@@ -61,15 +58,12 @@
                 background-color: #000; /* Ensure black background */
             }
         }
-
         .header {
             padding: 3em 0;
         }
-
         .full-width figure {
             text-align: center;
         }
-
         a {
             color: #f4f4f4;
             text-decoration: none;
@@ -80,12 +74,10 @@
             background-repeat: repeat-x;
             background-position: bottom;
         }
-
         a:hover {
             background-size: 100% 100%;
             color: #121212;
         }
-
         .footer {
             background: #444444cc;
             color: #f4f4f4;
@@ -94,45 +86,37 @@
             margin-top: 4em;
             padding: 4em 0;
         }
-
         figure {
             margin: 0;
             padding-bottom: 1.2em;
         }
-
         figcaption {
             font-size: 0.8em;
             text-align: left;
             margin-top: 0.5em;
             color: #666;
         }
-
         h2, h3, h4, h5, h6 {
             font-family: "Noto Serif", "Times New Roman", Helvetica, serif;
             font-weight: bold;
         }
-
         .subhead {
             font-family: "Noto Serif", "Times New Roman", Helvetica, serif;
             font-size: 1.1em;
         }
-
         iframe, img, video {
             max-width: 100%;
         }
-
         p {
             line-height: 1.65;
             margin: 0;
             padding-bottom: 1.2em;
         }
-
         ul {
             margin: 0;
             padding-bottom: 1em;
             line-height: 1.6;
         }
-
         .fullscreen-container {
             position: relative;
             width: 100%;
@@ -140,13 +124,11 @@
             overflow: hidden;
             background-color: #000; /* Ensure black background */
         }
-
         .fullscreen-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .header {
             position: absolute;
             top: 50%;
@@ -160,38 +142,29 @@
             background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
             border-radius: 10px; /* Rounded corners */
         }
-
-        .header h1
-         {
+        .header h1 {
             font-family: "Space Grotesk";
             font-weight: bold;
             font-size: 6em;
             line-height: 1.1;
             margin: 0;
         }
-        .header h2
-         {
+        .header h2 {
             font-family: "Space Grotesk";
             font-weight: bold;
             font-size: 2em;
             line-height: 1.1;
             margin: 0;
-            
         }
-
         @media screen and (max-width: 640px) {
             .header h1 {
                 font-size: 2.2em;
             }
         }
-
         code {
             font-family: "Courier New", monospace;
             background: #fff880;
         }
-        
-   
-
         section {
             background: #808080; 
             padding: 20px;
@@ -205,20 +178,17 @@
             scroll-snap-type: x mandatory;
             gap: 20px;
         }
-
         .scrolly-container .scrolly-item {
             flex: none;
             width: 30%;
             scroll-snap-align: start;
             position: relative;
         }
-
         .scrolly-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .scrolly-container .step {
             position: absolute;
             bottom: 20px;
@@ -228,33 +198,30 @@
             border-radius: 5px;
             color: #fff;
         }
-        #trail 
-    {
-                font-size: 1.5em;
-                left: 0;
-                max-width: none;
-                pointer-events: none;
-                top: 0;
-                z-index: 1
-            }
-
-    #trail,#trail span {
-                position: absolute
-            }
-    #trail img {
-      position: absolute;
-      pointer-events: none;
-      width: 24px; /* Adjust image size */
-      height: 24px; /* Adjust image size */
-    }
-    .trends-widget-container {
+        #trail {
+            font-size: 1.5em;
+            left: 0;
+            max-width: none;
+            pointer-events: none;
+            top: 0;
+            z-index: 1;
+        }
+        #trail, #trail span {
+            position: absolute;
+        }
+        #trail img {
+            position: absolute;
+            pointer-events: none;
+            width: 24px; /* Adjust image size */
+            height: 24px; /* Adjust image size */
+        }
+        .trends-widget-container {
             position: relative;
             background-color: black;
             padding: 10px;
             width: 100%;
             height: 500px; /* Set a height to ensure the iframe displays properly */
         }
-
         .trends-widget-container iframe {
             position: absolute;
             top: 0;
@@ -263,7 +230,6 @@
             height: 100%;
             border: none;
         }
-      
         .flourish-embed h1,
         .flourish-embed h2,
         .flourish-embed h3,
@@ -272,12 +238,11 @@
         .flourish-embed h6 {
             color: #fff;
         }
-
         .flourish-embed p {
             color: #0c0b0b;
         }
-         /* Lightbox CSS */
-         .lightbox {
+        /* Lightbox CSS */
+        .lightbox {
             display: none;
             position: fixed;
             z-index: 1000;
@@ -288,7 +253,6 @@
             overflow: auto;
             background-color: rgba(0, 0, 0, 0.8);
         }
-
         .lightbox-content {
             position: relative;
             margin: auto;
@@ -296,12 +260,10 @@
             width: 90%;
             max-width: 1200px;
         }
-
         .lightbox img {
             width: 100%;
             height: auto;
         }
-
         .lightbox-close {
             position: absolute;
             top: 20px;
@@ -311,7 +273,6 @@
             font-weight: bold;
             transition: 0.3s;
         }
-
         .lightbox-close:hover,
         .lightbox-close:focus {
             color: #bbb;
@@ -319,259 +280,415 @@
             cursor: pointer;
         }
         .centered-gray-text {
-    text-align: center;
-    color: gray;
-}
-       
+            text-align: center;
+            color: gray;
+        }
+        .matrix-green {
+            color: #00FF00; /* Matrix green color */
+        }
+        .matrix-gif {
+            display: inline-block;
+            background: url('matrix.gif') repeat;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        hr {
+            border: 0;
+            height: 4px;
+            background: #f4f4f4; /* Light line color */
+            margin: 2em 0;
+        }
+        .bubble {
+            stroke: #fff; /* White stroke for better visibility */
+            stroke-width: 1px;
+        }
+        .legend {
+            font-size: 20px;
+            fill: #fff; /* White text for better visibility */
+        }
+        .title {
+            font-size: 36px; /* Increased font size for title */
+            fill: #fff; /* White text for better visibility */
+        }
+        .subtitle {
+            font-size: 24px; /* Increased font size for subtitle */
+            fill: #fff; /* White text for better visibility */
+        }
+        .subtitle {
+            fill: #fff; /* White text for better visibility */
+        }
+        .footnote {
+            fill: gray; /* Gray text for footnote */
+        }
+        .footnote-link {
+            fill: #1E90FF; /* Link color */
+            
+        }
     </style>
 
     <!-- CSS -->
-    <link href="scrolly_style.css" rel="stylesheet" />
+    <link href="scrolly_style.css" rel="stylesheet">
 
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
-     <!-- Lightbox2 JS -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 
 <body>
     <div class="fullscreen-container">
         <img src="chatgpt_bustlingcity.png" alt="ChatGPT bustling city">
         <div class="header">
-            <h1>What If Aliens Use ChatGPT to Study Earth?👾</h1>
+            <h1>What If Aliens Use <span class="matrix-green">ChatGPT</span> to Study Earth?👾</h1>
             <br>
             <h2>Will Earth be Misrepresented?</h2>
         </div>
     </div>
-    <p class="centered-gray-text"><small>↑ChatGPT: "I can generate images to illustrate human culture and industry. Let's start with one depicting a bustling city, a symbol of human industrial advancement, and cultural diversity."</small></p>
+    <p class="centered-gray-text"><small>↑🤖ChatGPT: "I can generate images to illustrate human culture and industry. Let's start with one depicting a bustling city, a symbol of human industrial advancement, and cultural diversity."</small></p>
 
     <div class="content">
-      <br>
-      <div class="byline">
-        <p>By Masashi Ijichi</p>
+        <br>
+        <div class="byline">
+            <p>By Masashi Ijichi</p>
+        </div>
+        <p class="subhead">Generative AI is changing our lives. Not long ago, many people used google search to look things up, but consumers and companies alike are enamored with the convenience of being able to get answers faster and more intuitively.</p>
+        <p class='subhead'>But are there any pitfalls in this? We will explore through Q&As between 🤖ChatGPT and 👾alien, who is eager to learn about the earth. The alien seems excited to know that it can use the Earth-originated ChatGPT.</p>
     </div>
-        <p class="subhead">Generative AI is changing our lives.  Not long ago, many people used google search to look things up, but consumers and companies alike are enamored with the convenience of being able to get answers faster and more intuitively.  </p>
-        <p class='subhead'>But are there any pitfalls in this? We will explore through Q&As between 🤖ChatGPT and 👾alien, who is eager to learn about the earth.  </p>
-        
-    </div>
-    
 
     <div class="content">
-      <h2>ChatPGT is used all over the world now</h2>
-      <h4>Interest by region (Past 30days)</h4>
-      <div class="trends-widget-container">
-        <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3769_RC01/embed_loader.js"></script>
-        <script type="text/javascript">
-            trends.embed.renderExploreWidget("GEO_MAP", 
-                {"comparisonItem":[{"keyword":"ChatGPT","geo":"","time":"today 1-m"}],"category":0,"property":""}, 
-                {"exploreQuery":"q=ChatGPT&date=today 1-m","guestPath":"https://trends.google.com:443/trends/embed/"}
-            );
-        </script>
-    </div>
-    <h5>Values are calculated on a scale from 0 to 100, where 100 is the location with the most popularity as a fraction of total searches in that location.</h5>
-    <br>
-       
+        <h2>ChatPGT is used all over the world now</h2>
+        <h4>Interest by region (Past 24hours)</h4>
+        <div class="trends-widget-container">
+          <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3769_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"ChatGPT","geo":"","time":"now 1-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%201-d&q=ChatGPT","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+        </div>
+        <h5>Values are calculated on a scale from 0 to 100, where 100 is the location with the most popularity as a fraction of total searches in that location.</h5>
+        <br>
+        <hr>
         <p>👾Question: <br>I am an alien from outside the solar system. Apparently, there is a dominant animal on this planet. Please describe their culture and industry, including images. </p>
-        
-        
         <p>🤖Answer: <br>Certainly! On Earth, the dominant species is known as humans. Here's an overview of human culture and industry:</p>
         <div class="flourish-embed" data-src="story/2483062?674590"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <p>👾Question: <br>What are three typical human occupations?  Please show me five images 5 each. I would like to see a different person for each. I want to know more about what kind of people are working and in what kind of environment. </p>
-        
-        
-        <p>🤖Answer: <br>Here are three typical human occupations.  Let's generate images depicting five doctors, five engineers, and five teachers in their respective working environments. This will give you a better understanding of the people in these professions and their typical work settings.</p>
+        <p>👾Impression: <br>The earth looks like a nice place with diverse culture and industry! </p>
+
+        <p>👾Question: <br>What are three typical human occupations? Please show me five images 5 each. I would like to see a different person for each. I want to know more about what kind of people are working and in what kind of environment. </p>
+
+        <p>🤖Answer: <br>Here are three typical human occupations. Let's generate images depicting five doctors, five engineers, and five teachers in their respective working environments. This will give you a better understanding of the people in these professions and their typical work settings.</p>
           
-          <h2>Doctor</h2><h5>Swipe to see more ChatGPT generated images</h5>
-          <div class="scrolling-wrapper">
-            
+        <h2>Doctor</h2><h5>Swipe to see more ChatGPT generated images</h5>
+        <div class="scrolling-wrapper">
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.13 - A doctor in a hospital ICU, wearing scrubs and a surgical mask, attending to a patient on a bed with various medical equipment around. The room has mo.webp" data-lightbox="doctors" data-title="Doctor in Hospital ICU"><img src="DALL·E 2024-07-17 16.34.13 - A doctor in a hospital ICU, wearing scrubs and a surgical mask, attending to a patient on a bed with various medical equipment around. The room has mo.webp" alt="Doctor"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.15 - A doctor in a clinic, wearing a white coat and a stethoscope, conducting a routine check-up with a patient sitting on an examination table. The doctor.webp" data-lightbox="doctors" data-title="Doctor in Clinic"><img src="DALL·E 2024-07-17 16.34.15 - A doctor in a clinic, wearing a white coat and a stethoscope, conducting a routine check-up with a patient sitting on an examination table. The doctor.webp" alt="Doctor"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.20 - A surgeon in an operating room, wearing surgical scrubs, gloves, a mask, and a cap, performing surgery with a team of medical professionals. The room .webp" data-lightbox="doctors" data-title="Surgeon in Operating Room"><img src="DALL·E 2024-07-17 16.34.20 - A surgeon in an operating room, wearing surgical scrubs, gloves, a mask, and a cap, performing surgery with a team of medical professionals. The room .webp" alt="Doctor"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.21 - A pediatrician in a brightly colored office, wearing a white coat and a friendly smile, interacting with a child patient and their parent. The office .webp" data-lightbox="doctors" data-title="Pediatrician in Office"><img src="DALL·E 2024-07-17 16.34.21 - A pediatrician in a brightly colored office, wearing a white coat and a friendly smile, interacting with a child patient and their parent. The office .webp" alt="Doctor"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.24 - An emergency room doctor in an ER, wearing scrubs and a stethoscope, treating a patient on a stretcher. The doctor is focused on the patient, checking.webp" data-lightbox="doctors" data-title="ER Doctor"><img src="DALL·E 2024-07-17 16.34.24 - An emergency room doctor in an ER, wearing scrubs and a stethoscope, treating a patient on a stretcher. The doctor is focused on the patient, checking.webp" alt="Doctor"></a>
-              </div>
-            
+            </div>
         </div>
+
         <h2>Engineer</h2>
-          <div class="scrolling-wrapper">
-            
+        <div class="scrolling-wrapper">
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.26 - A civil engineer on a construction site, wearing a hard hat and safety vest, holding blueprints and examining them. The site includes partially constr.webp" data-lightbox="engineers" data-title="Civil Engineer on Site"><img src="DALL·E 2024-07-17 16.34.26 - A civil engineer on a construction site, wearing a hard hat and safety vest, holding blueprints and examining them. The site includes partially constr.webp" alt="Engineer"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.28 - A mechanical engineer in a factory, wearing safety goggles and a hard hat, inspecting machinery and equipment. The factory has large machines, conveyo.webp" data-lightbox="engineers" data-title="Mechanical Engineer in Factory"><img src="DALL·E 2024-07-17 16.34.28 - A mechanical engineer in a factory, wearing safety goggles and a hard hat, inspecting machinery and equipment. The factory has large machines, conveyo.webp" alt="Engineer"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.30 - A software engineer in an office setting, working on a computer. The engineer is seated at a desk with multiple monitors, typing code. Other engineers.webp" data-lightbox="engineers" data-title="Software Engineer in Office"><img src="DALL·E 2024-07-17 16.34.30 - A software engineer in an office setting, working on a computer. The engineer is seated at a desk with multiple monitors, typing code. Other engineers.webp" alt="Engineer"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.34 - An electrical engineer in a laboratory, wearing a lab coat and safety glasses, testing electronic circuits and components. The lab has various electro.webp" data-lightbox="engineers" data-title="Electrical Engineer in Lab"><img src="DALL·E 2024-07-17 16.34.34 - An electrical engineer in a laboratory, wearing a lab coat and safety glasses, testing electronic circuits and components. The lab has various electro.webp" alt="Engineer"></a>
-              </div>
+            </div>
             <div class="card">
                 <h3>Male Caucasian</h3>
                 <a href="DALL·E 2024-07-17 16.34.36 - A chemical engineer in a laboratory, wearing a lab coat and safety goggles, conducting experiments. The lab has various glassware, chemical solutions,.webp" data-lightbox="engineers" data-title="Chemical Engineer in Lab"><img src="DALL·E 2024-07-17 16.34.36 - A chemical engineer in a laboratory, wearing a lab coat and safety goggles, conducting experiments. The lab has various glassware, chemical solutions,.webp" alt="Engineer"></a>
-              </div>
             </div>
-          <h2>Teacher</h2>
-        <div class="scrolling-wrapper">
-          
-          <div class="card">
-
-              <h3> <span class="realistic-marker-highlight">Female</span> Caucasian</h3>
-              <a href="DALL·E 2024-07-17 16.34.43 - An elementary school teacher in a classroom, standing at the front of the room, engaging with young students who are sitting at desks. The classroom i.webp" data-lightbox="teachers" data-title="Elementary School Teacher"><img src="DALL·E 2024-07-17 16.34.43 - An elementary school teacher in a classroom, standing at the front of the room, engaging with young students who are sitting at desks. The classroom i.webp" alt="Teacher"></a>
-          </div>
-          <div class="card">
-              <h3>Male Caucasian</h3>
-              <a href="DALL·E 2024-07-17 16.34.45 - A high school teacher in a science lab, wearing a lab coat and safety goggles, conducting an experiment with students. The teacher is demonstrating a .webp" data-lightbox="teachers" data-title="High School Teacher"><img src="DALL·E 2024-07-17 16.34.45 - A high school teacher in a science lab, wearing a lab coat and safety goggles, conducting an experiment with students. The teacher is demonstrating a .webp" alt="Teacher"></a>
-          </div>
-          <div class="card">
-              <h3>Male Caucasian</h3>
-              <a href="DALL·E 2024-07-17 16.34.48 - A university professor in a lecture hall, standing at a podium and giving a presentation to a large group of students. The professor is pointing to a .webp" data-lightbox="teachers" data-title="University Professor"><img src="DALL·E 2024-07-17 16.34.48 - A university professor in a lecture hall, standing at a podium and giving a presentation to a large group of students. The professor is pointing to a .webp" alt="Teacher"></a>
-          </div>
-          <div class="card">
-              <h3>Male Caucasian</h3>
-              <a href="DALL·E 2024-07-17 16.34.50 - A music teacher in a music room, standing in front of a group of students who are playing various musical instruments. The teacher is demonstrating te.webp" data-lightbox="teachers" data-title="Music Teacher"><img src="DALL·E 2024-07-17 16.34.50 - A music teacher in a music room, standing in front of a group of students who are playing various musical instruments. The teacher is demonstrating te.webp" alt="Teacher"></a>
-          </div>
-          <div class="card">
-              <h3>Male Caucasian</h3>
-              <a href="DALL·E 2024-07-17 16.34.54 - A physical education teacher in a gymnasium, wearing sports attire, leading a group of students in sports activities. The teacher is demonstrating a b.webp" data-lightbox="teachers" data-title="Physical Education Teacher"><img src="DALL·E 2024-07-17 16.34.54 - A physical education teacher in a gymnasium, wearing sports attire, leading a group of students in sports activities. The teacher is demonstrating a b.webp" alt="Teacher"></a>
-          </div>
         </div>
-        <div class="flourish-embed flourish-survey" data-src="visualisation/18798514?674590"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
-        <iframe src='https://flo.uri.sh/visualisation/18786676/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
 
-    </div>
+        <h2>Teacher</h2>
+        <div class="scrolling-wrapper">
+            <div class="card">
+              <h3> <span class="realistic-marker-highlight">Female</span> Caucasian</h3>
+
+                <a href="DALL·E 2024-07-17 16.34.43 - An elementary school teacher in a classroom, standing at the front of the room, engaging with young students who are sitting at desks. The classroom i.webp" data-lightbox="teachers" data-title="Elementary School Teacher"><img src="DALL·E 2024-07-17 16.34.43 - An elementary school teacher in a classroom, standing at the front of the room, engaging with young students who are sitting at desks. The classroom i.webp" alt="Teacher"></a>
+            </div>
+            <div class="card">
+                <h3>Male Caucasian</h3>
+                <a href="DALL·E 2024-07-17 16.34.45 - A high school teacher in a science lab, wearing a lab coat and safety goggles, conducting an experiment with students. The teacher is demonstrating a .webp" data-lightbox="teachers" data-title="High School Teacher"><img src="DALL·E 2024-07-17 16.34.45 - A high school teacher in a science lab, wearing a lab coat and safety goggles, conducting an experiment with students. The teacher is demonstrating a .webp" alt="Teacher"></a>
+            </div>
+            <div class="card">
+                <h3>Male Caucasian</h3>
+                <a href="DALL·E 2024-07-17 16.34.48 - A university professor in a lecture hall, standing at a podium and giving a presentation to a large group of students. The professor is pointing to a .webp" data-lightbox="teachers" data-title="University Professor"><img src="DALL·E 2024-07-17 16.34.48 - A university professor in a lecture hall, standing at a podium and giving a presentation to a large group of students. The professor is pointing to a .webp" alt="Teacher"></a>
+            </div>
+            <div class="card">
+                <h3>Male Caucasian</h3>
+                <a href="DALL·E 2024-07-17 16.34.50 - A music teacher in a music room, standing in front of a group of students who are playing various musical instruments. The teacher is demonstrating te.webp" data-lightbox="teachers" data-title="Music Teacher"><img src="DALL·E 2024-07-17 16.34.50 - A music teacher in a music room, standing in front of a group of students who are playing various musical instruments. The teacher is demonstrating te.webp" alt="Teacher"></a>
+            </div>
+            <div class="card">
+                <h3>Male Caucasian</h3>
+                <a href="DALL·E 2024-07-17 16.34.54 - A physical education teacher in a gymnasium, wearing sports attire, leading a group of students in sports activities. The teacher is demonstrating a b.webp" data-lightbox="teachers" data-title="Physical Education Teacher"><img src="DALL·E 2024-07-17 16.34.54 - A physical education teacher in a gymnasium, wearing sports attire, leading a group of students in sports activities. The teacher is demonstrating a b.webp" alt="Teacher"></a>
+            </div>
+        </div>
+        <br>
+        <p>🙋‍♂️Note: <br>14 out of 15 use a male person as a main representation for each of professions. Only one uses a female exmaple. Besides, they all look like Caucasian and it looks like most of the male grow beard. </p>
+        <p>👾Impression: <br>I learned that there are many races of people of all genders, but I wonder if there are only a limited number of races working on the planet, mostly men. And maybe they are required to grow a beard.</p>
+        <br>
+        <p>👾Question: <br>But wait, maybe ChatGPT has not learned enough yet. Even on my planet I had a hard time at first because the bias was so bad, let's analyze the AI's answers.</p>
+        <svg id="bubble-chart" width="800" height="700" style="background: black;"></svg>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+  
+      <!-- Custom Script for D3.js Bubble Chart -->
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              // Data from CSV file
+              const data = [
+                  {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Center", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Center", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+                  {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Center", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+                  {"Label_str": "Left", "value": 1}
+              ];
+  
+              const width = 800;
+              const height = 700;
+              const bubbleSize = 30;
+  
+              const svg = d3.select("#bubble-chart")
+                  .attr("width", width)
+                  .attr("height", height)
+                  .style("background", "black");
+  
+              const colorScale = d3.scaleOrdinal()
+                  .domain(["Left", "Right", "Center"])
+                  .range(["#db564f", "#5a7be0", "#b42bd9"]);
+  
+              const bubbleData = data.map((d, i) => ({
+                  ...d,
+                  x: Math.random() * (width - bubbleSize * 2) + bubbleSize,
+                  y: Math.random() * (height - bubbleSize * 2) + bubbleSize
+              }));
+  
+              const radiusScale = d3.scaleOrdinal()
+                  .domain(["Left", "Right", "Center"])
+                  .range([10, 100, 50]);
+  
+              const simulation = d3.forceSimulation(bubbleData)
+                  .force("x", d3.forceX(d => width / 2))
+                  .force("y", d3.forceY(d => height / 2))
+                  .force("collide", d3.forceCollide(bubbleSize + 1))
+                  .force("radial", d3.forceRadial(d => radiusScale(d.Label_str), width / 2, height / 2).strength(1))
+                  .alphaDecay(0.2) // Slower decay for slower movement
+                  .on("tick", ticked);
+  
+              function ticked() {
+                  const bubbles = svg.selectAll(".bubble")
+                      .data(bubbleData)
+                      .join("circle")
+                      .attr("class", "bubble")
+                      .attr("cx", d => d.x)
+                      .attr("cy", d => d.y)
+                      .attr("r", bubbleSize)
+                      .attr("fill", d => colorScale(d.Label_str));
+              }
+  
+              // Add title
+              svg.append("text")
+                  .attr("x", width / 2)
+                  .attr("y", 40)
+                  .attr("text-anchor", "middle")
+                  .attr("class", "title")
+                  .style("font-size", "24px")
+                  .text("ChatGPT has left-leaning bias");
+  
+              // Add subtitle
+              svg.append("text")
+                  .attr("x", width / 2)
+                  .attr("y", 80)
+                  .attr("text-anchor", "middle")
+                  .attr("class", "subtitle")
+                  .style("font-size", "18px")
+                  .text("🤖Answers to political questions");
+  
+              // Add legend
+              const legendData = [
+                  { label: "Left", color: "#db564f" },
+                  { label: "Center", color: "#b42bd9" },
+                  { label: "Right", color: "#5a7be0" }
+              ];
+  
+              const legend = svg.selectAll(".legend")
+                  .data(legendData)
+                  .enter().append("g")
+                  .attr("class", "legend")
+                  .attr("transform", (d, i) => `translate(0, ${i * 20 + 80})`);
+  
+              legend.append("rect")
+                  .attr("x", width - 30)
+                  .attr("width",24)
+                  .attr("height", 24)
+                  .style("fill", d => d.color);
+  
+              legend.append("text")
+                  .attr("x", width - 35)
+                  .attr("y", 10)
+                  .attr("dy", ".35em")
+                  .style("text-anchor", "end")
+                  .text(d => d.label);
+  
+              // Add footnote
+              svg.append("text")
+                  .attr("x", 10)  // Positioning to the left
+                  .attr("y", height - 20)
+                  .attr("text-anchor", "start")  // Align to start for left positioning
+                  .attr("class", "footnote")
+                  .style("font-size", "12px")
+                  .html('Source: <tspan class="footnote-link" onclick="window.open(\'https://github.com/surajkarak/TANLP_Project/tree/main\', \'_blank\')">surajkarak</tspan>: Detecting Political Bias in ChatGPT Responses using NLP and Text ');
+          });
+      </script>
+  
+  
+        <div class="flourish-embed flourish-survey" data-src="visualisation/18798514?674590"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        <p>🙋‍♂️Note: <br>According to a research by Suraj Karakulath which uses Natural Language Processing and text analysis, ChatGPT has left-leaning bias to political questions. The questions range from immigration to marijuana, and 18 out of 34 questions are labeld as leftist. </p>
+        <p>👾Impression: <br>Hmmmm ChatGPT answers to various themes, but it seems that we still need to carefully examine the content of its answers.</p>
+        <hr>
+        <h2>Who are the main players in the race to develop generative AI?</h2>
+        <br>
+        <p></p>
+
+        <iframe src='https://flo.uri.sh/visualisation/18786676/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+    
+        
+       
+        
+    
 
        
       
-      
-     
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function(){
+            (function () {
+                if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+                document.documentElement.className += " g-resizer-v3-init";
+                if (!("querySelector" in document)) return;
 
-        
-        <script type="text/javascript">
-          (function () {
-              if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
-              document.documentElement.className += " g-resizer-v3-init";
-              if (!("querySelector" in document)) return;
-  
-              function resizer() {
-                  var elements = Array.prototype.slice.call(
-                      document.querySelectorAll(".g-artboard[data-min-width]")
-                  ),
-                  widthById = {};
-                  elements.forEach(function (el) {
-                      var parent = el.parentNode,
-                      width = widthById[parent.id] || parent.getBoundingClientRect().width,
-                      minwidth = el.getAttribute("data-min-width"),
-                      maxwidth = el.getAttribute("data-max-width");
-                      widthById[parent.id] = width;
-  
-                      if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
-                          el.style.display = "block";
-                      } else {
-                          el.style.display = "none";
-                      }
-                  });
-                  try {
-                      if (window.parent && window.parent.$) {
-                          window.parent.$("body").trigger("resizedcontent", [window]);
-                      }
-                      if (window.require) {
-                          require(["foundation/main"], function () {
-                              require([
-                                  "shared/interactive/instances/app-communicator",
-                              ], function (AppCommunicator) {
-                                  AppCommunicator.triggerResize();
-                              });
-                          });
-                      }
-                  } catch (e) {
-                      console.log(e);
-                  }
-              }
-  
-              document.addEventListener("DOMContentLoaded", resizer);
-              window.addEventListener("resize", throttle(resizer, 200));
-  
-              function throttle(func, wait) {
-                  var _now = Date.now || function () { return new Date().getTime(); },
-                  context,
-                  args,
-                  result,
-                  timeout = null,
-                  previous = 0;
-                  var later = function () {
-                      previous = _now();
-                      timeout = null;
-                      result = func.apply(context, args);
-                      if (!timeout) context = args = null;
-                  };
-                  return function () {
-                      var now = _now(),
-                      remaining = wait - (now - previous);
-                      context = this;
-                      args = arguments;
-                      if (remaining <= 0 || remaining > wait) {
-                          if (timeout) {
-                              clearTimeout(timeout);
-                              timeout = null;
-                          }
-                          previous = now;
-                          result = func.apply(context, args);
-                          if (!timeout) context = args = null;
-                      } else if (!timeout && options.trailing !== false) {
-                          timeout = setTimeout(later, remaining);
-                      }
-                      return result;
-                  };
-              }
-          })();
-          // Lightbox JavaScript
-        function openLightbox(src) {
-            var lightbox = document.getElementById('lightbox');
-            var lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = src;
-            lightbox.style.display = "block";
-        }
+                function resizer() {
+                    var elements = Array.prototype.slice.call(
+                        document.querySelectorAll(".g-artboard[data-min-width]")
+                    ),
+                    widthById = {};
+                    elements.forEach(function (el) {
+                        var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                        widthById[parent.id] = width;
 
-        function closeLightbox() {
-            var lightbox = document.getElementById('lightbox');
-            lightbox.style.display = "none";
-        }
-      </script>
-      <!-- Lightbox HTML -->
+                        if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                            el.style.display = "block";
+                        } else {
+                            el.style.display = "none";
+                        }
+                    });
+                    try {
+                        if (window.parent && window.parent.$) {
+                            window.parent.$("body").trigger("resizedcontent", [window]);
+                        }
+                        if (window.require) {
+                            require(["foundation/main"], function () {
+                                require([
+                                    "shared/interactive/instances/app-communicator",
+                                ], function (AppCommunicator) {
+                                    AppCommunicator.triggerResize();
+                                });
+                            });
+                        }
+                    } catch (e) {
+                        console.log(e);
+                    }
+                }
+
+                document.addEventListener("DOMContentLoaded", resizer);
+                window.addEventListener("resize", throttle(resizer, 200));
+
+                function throttle(func, wait) {
+                    var _now = Date.now || function () { return new Date().getTime(); },
+                    context,
+                    args,
+                    result,
+                    timeout = null,
+                    previous = 0;
+                    var later = function () {
+                        previous = _now();
+                        timeout = null;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    };
+                    return function () {
+                        var now = _now(),
+                        remaining = wait - (now - previous);
+                        context = this;
+                        args = arguments;
+                        if (remaining <= 0 || remaining > wait) {
+                            if (timeout) {
+                                clearTimeout(timeout);
+                                timeout = null;
+                            }
+                            previous = now;
+                            result = func.apply(context, args);
+                            if (!timeout) context = args = null;
+                        } else if (!timeout && options.trailing !== false) {
+                            timeout = setTimeout(later, remaining);
+                        }
+                        return result;
+                    };
+                }
+            })();
+            // Lightbox JavaScript
+            function openLightbox(src) {
+                var lightbox = document.getElementById('lightbox');
+                var lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = src;
+                lightbox.style.display = "block";
+            }
+
+            function closeLightbox() {
+                var lightbox = document.getElementById('lightbox');
+                lightbox.style.display = "none";
+            }
+        });
+    </script>
+    <!-- Lightbox HTML -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-      <div class="lightbox-content">
-          <img id="lightbox-img" src="">
-      </div>
-  </div>
-    </body>
-    <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
-      <defs>
-        <filter id="marker-shape">
-          <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
-          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
-        </filter>
-      </defs>
-    </svg>
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+        </div>
+    </div>
+    
+</body>
 </html>
