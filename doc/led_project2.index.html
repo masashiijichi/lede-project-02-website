@@ -485,73 +485,74 @@
   
       <!-- Custom Script for D3.js Bubble Chart -->
       <script>
-          document.addEventListener('DOMContentLoaded', function() {
-              // Data from CSV file
-              const data = [
-                  {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Center", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Center", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
-                  {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Center", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
-                  {"Label_str": "Left", "value": 1}
-              ];
-  
-              const svgContainer = document.querySelector('.svg-container');
-              const width = svgContainer.clientWidth;
-              const height = svgContainer.clientHeight;
-              const bubbleSize = Math.min(width, height) / 20; // Adjust bubble size dynamically
-  
-              const svg = d3.select("#bubble-chart")
-                  .attr("width", width)
-                  .attr("height", height)
-                  .style("background", "black");
-  
-              const colorScale = d3.scaleOrdinal()
-                  .domain(["Left", "Right", "Center"])
-                  .range(["#db564f", "#5a7be0", "#b42bd9"]);
-  
-              const bubbleData = data.map((d, i) => ({
-                  ...d,
-                  x: Math.random() * (width - bubbleSize * 2) + bubbleSize,
-                  y: Math.random() * (height - bubbleSize * 2) + bubbleSize
-              }));
-  
-              const radiusScale = d3.scaleOrdinal()
-                  .domain(["Left", "Right", "Center"])
-                  .range([10, 100, 50]);
-  
-              const simulation = d3.forceSimulation(bubbleData)
-                  .force("x", d3.forceX(d => width / 2))
-                  .force("y", d3.forceY(d => height / 2))
-                  .force("collide", d3.forceCollide(bubbleSize + 1))
-                  .force("radial", d3.forceRadial(d => radiusScale(d.Label_str), width / 2, height / 2).strength(1))
-                  .alphaDecay(0.2) // Slower decay for slower movement
-                  .on("tick", ticked);
-  
-              function ticked() {
-                  const bubbles = svg.selectAll(".bubble")
-                      .data(bubbleData)
-                      .join("circle")
-                      .attr("class", "bubble")
-                      .attr("cx", d => d.x)
-                      .attr("cy", d => d.y)
-                      .attr("r", bubbleSize)
-                      .attr("fill", d => colorScale(d.Label_str));
-              }
-  
-              // Add title
+         document.addEventListener('DOMContentLoaded', function() {
+    // Data from CSV file
+    const data = [
+        {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Center", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Center", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1},
+        {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Right", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Center", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Left", "value": 1}, {"Label_str": "Left", "value": 1}, {"Label_str": "Right", "value": 1},
+        {"Label_str": "Left", "value": 1}
+    ];
+
+    const svgContainer = document.querySelector('.svg-container');
+    const width = svgContainer.clientWidth;
+    const height = svgContainer.clientHeight;
+    const bubbleSize = Math.min(width, height) / 20; // Adjust bubble size dynamically
+
+    const svg = d3.select("#bubble-chart")
+        .attr("width", width)
+        .attr("height", height)
+        .style("background", "black");
+
+    const colorScale = d3.scaleOrdinal()
+        .domain(["Left", "Right", "Center"])
+        .range(["#db564f", "#5a7be0", "#b42bd9"]);
+
+    const bubbleData = data.map((d, i) => ({
+        ...d,
+        x: Math.random() * (width - bubbleSize * 2) + bubbleSize,
+        y: Math.random() * (height - bubbleSize * 2) + bubbleSize
+    }));
+
+    const radiusScale = d3.scaleOrdinal()
+        .domain(["Left", "Right", "Center"])
+        .range([10, 100, 50]);
+
+    const simulation = d3.forceSimulation(bubbleData)
+        .force("x", d3.forceX(d => width / 2))
+        .force("y", d3.forceY(d => height / 2 - bubbleSize)) // Adjusted to avoid clipping
+        .force("collide", d3.forceCollide(bubbleSize + 1))
+        .force("radial", d3.forceRadial(d => radiusScale(d.Label_str), width / 2, height / 2).strength(1))
+        .alphaDecay(0.2) // Slower decay for slower movement
+        .on("tick", ticked);
+
+    function ticked() {
+        const bubbles = svg.selectAll(".bubble")
+            .data(bubbleData)
+            .join("circle")
+            .attr("class", "bubble")
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
+            .attr("r", bubbleSize)
+            .attr("fill", d => colorScale(d.Label_str));
+    }
+
+    // Add title
     svg.append("text")
         .attr("x", width / 2)
         .attr("y", height * 0.05)
         .attr("text-anchor", "middle")
         .attr("class", "title")
         .style("font-size", `${Math.min(width, height) * 0.04}px`)
+        .style("fill", "#ffffff") // Ensure text color is visible
         .text("ChatGPT has left-leaning bias");
 
     // Add subtitle
@@ -561,9 +562,11 @@
         .attr("text-anchor", "middle")
         .attr("class", "subtitle")
         .style("font-size", `${Math.min(width, height) * 0.03}px`)
+        .style("fill", "#ffffff") // Ensure text color is visible
         .text("🤖Answers to political questions");
- // Add legend
- const legendData = [
+
+    // Add legend
+    const legendData = [
         { label: "Left", color: "#db564f" },
         { label: "Center", color: "#b42bd9" },
         { label: "Right", color: "#5a7be0" }
@@ -595,13 +598,14 @@
     // Add footnote
     svg.append("text")
         .attr("x", width / 2)  // Centered at the bottom
-        .attr("y", height * 0.98)
+        .attr("y", height * 0.9)
         .attr("text-anchor", "middle")  // Center the text
         .attr("class", "footnote")
         .style("font-size", `${Math.min(width, height) * 0.015}px`)
         .style("fill", "gray")
         .html('Source: <tspan class="footnote-link" style="fill: #1E90FF; cursor: pointer;" onclick="window.open(\'https://github.com/surajkarak/TANLP_Project/tree/main\', \'_blank\')">surajkarak</tspan>: Detecting Political Bias in ChatGPT Responses using NLP and Text ');
 });
+
       </script>
   
   
