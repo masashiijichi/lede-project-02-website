@@ -546,58 +546,59 @@
               }
   
               // Add title
-              svg.append("text")
-                  .attr("x", width / 2)
-                  .attr("y", 40)
-                  .attr("text-anchor", "middle")
-                  .attr("class", "title")
-                  .style("font-size", "24px")
-                  .text("ChatGPT has left-leaning bias");
-  
-              // Add subtitle
-              svg.append("text")
-                  .attr("x", width / 2)
-                  .attr("y", 80)
-                  .attr("text-anchor", "middle")
-                  .attr("class", "subtitle")
-                  .style("font-size", "18px")
-                  .text("🤖Answers to political questions");
-  
-              // Add legend
-              const legendData = [
-                  { label: "Left", color: "#db564f" },
-                  { label: "Center", color: "#b42bd9" },
-                  { label: "Right", color: "#5a7be0" }
-              ];
-  
-              const legend = svg.selectAll(".legend")
-                  .data(legendData)
-                  .enter().append("g")
-                  .attr("class", "legend")
-                  .attr("transform", (d, i) => `translate(0, ${i * 20 + 80})`);
-  
-              legend.append("rect")
-                  .attr("x", width - 30)
-                  .attr("width",24)
-                  .attr("height", 24)
-                  .style("fill", d => d.color);
-  
-              legend.append("text")
-                  .attr("x", width - 35)
-                  .attr("y", 10)
-                  .attr("dy", ".35em")
-                  .style("text-anchor", "end")
-                  .text(d => d.label);
-  
-              // Add footnote
-              svg.append("text")
-                  .attr("x", 10)  // Positioning to the left
-                  .attr("y", height - 20)
-                  .attr("text-anchor", "start")  // Align to start for left positioning
-                  .attr("class", "footnote")
-                  .style("font-size", "12px")
-                  .html('Source: <tspan class="footnote-link" onclick="window.open(\'https://github.com/surajkarak/TANLP_Project/tree/main\', \'_blank\')">surajkarak</tspan>: Detecting Political Bias in ChatGPT Responses using NLP and Text ');
-          });
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height * 0.05)
+        .attr("text-anchor", "middle")
+        .attr("class", "title")
+        .style("font-size", `${Math.min(width, height) * 0.04}px`)
+        .text("ChatGPT has left-leaning bias");
+
+    // Add subtitle
+    svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height * 0.1)
+        .attr("text-anchor", "middle")
+        .attr("class", "subtitle")
+        .style("font-size", `${Math.min(width, height) * 0.03}px`)
+        .text("🤖Answers to political questions");
+
+    // Add legend
+    const legendData = [
+        { label: "Left", color: "#db564f" },
+        { label: "Center", color: "#b42bd9" },
+        { label: "Right", color: "#5a7be0" }
+    ];
+
+    const legend = svg.selectAll(".legend")
+        .data(legendData)
+        .enter().append("g")
+        .attr("class", "legend")
+        .attr("transform", (d, i) => `translate(0, ${i * 20 + height * 0.15})`);
+
+    legend.append("rect")
+        .attr("x", width - 30)
+        .attr("width", 24)
+        .attr("height", 24)
+        .style("fill", d => d.color);
+
+    legend.append("text")
+        .attr("x", width - 35)
+        .attr("y", 12)
+        .attr("dy", ".35em")
+        .style("text-anchor", "end")
+        .style("font-size", `${Math.min(width, height) * 0.02}px`)
+        .text(d => d.label);
+
+    // Add footnote
+    svg.append("text")
+        .attr("x", 10)  // Positioning to the left
+        .attr("y", height - 20)
+        .attr("text-anchor", "start")  // Align to start for left positioning
+        .attr("class", "footnote")
+        .style("font-size", `${Math.min(width, height) * 0.015}px`)
+        .html('Source: <tspan class="footnote-link" onclick="window.open(\'https://github.com/surajkarak/TANLP_Project/tree/main\', \'_blank\')">surajkarak</tspan>: Detecting Political Bias in ChatGPT Responses using NLP and Text ');
+});
       </script>
   
   
