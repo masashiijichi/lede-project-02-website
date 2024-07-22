@@ -507,7 +507,7 @@
     const svgContainer = document.querySelector('.svg-container');
     const width = svgContainer.clientWidth;
     const height = svgContainer.clientHeight;
-    const bubbleSize = Math.min(width, height) / 20; // Adjust bubble size dynamically
+    const bubbleSize = Math.min(width, height) / 25; // Adjust bubble size dynamically
 
     const svg = d3.select("#bubble-chart")
         .attr("width", width)
@@ -530,7 +530,7 @@
 
     const simulation = d3.forceSimulation(bubbleData)
         .force("x", d3.forceX(d => width / 2))
-        .force("y", d3.forceY(d => height / 2 - bubbleSize*1.5)) // Adjusted to avoid clipping
+        .force("y", d3.forceY(d => height / 2 - bubbleSize)) // Adjusted to avoid clipping
         .force("collide", d3.forceCollide(bubbleSize + 1))
         .force("radial", d3.forceRadial(d => radiusScale(d.Label_str), width / 2, height / 2).strength(1))
         .alphaDecay(0.2) // Slower decay for slower movement
