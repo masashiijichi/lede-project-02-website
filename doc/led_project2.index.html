@@ -70,7 +70,7 @@
             padding: 0.2rem 0 0;
             background-image: linear-gradient(to right, #ffe462 0, #ffe462 100%);
             background-size: 100% 20%;
-            background-position-y: 17px;
+            background-position-y: 14px;
             background-repeat: repeat-x;
             background-position: bottom;
         }
@@ -323,7 +323,14 @@
         .footnote-link {
             fill: #1E90FF; /* Link color */
             
+        }.dot-dash-line {
+            border-top: 2px solid transparent;
+            background-image: linear-gradient(to right, #f4f4f4 33%, transparent 33%, transparent 66%, #f4f4f4 66%);
+            background-size: 10px 2px;
+            height: 2px;
+            margin: 2em 0;
         }
+
     </style>
 
     <!-- CSS -->
@@ -353,7 +360,7 @@
             <p>By Masashi Ijichi</p>
         </div>
         <p class="subhead">Generative AI is changing our lives. Not long ago, many people used google search to look things up, but consumers and companies alike are enamored with the convenience of being able to get answers faster and more intuitively.</p>
-        <p class='subhead'>But are there any pitfalls in this? We will explore through Q&As between 🤖ChatGPT and 👾alien, who is eager to learn about the earth. The alien seems excited to know that it can use the Earth-originated ChatGPT.</p>
+        <p class='subhead'>But are there any pitfalls in this? We will explore through Q&As between 🤖<a href="https://chatgpt.com/" target="_blank">ChatGPT</a> and 👾alien, who is eager to learn about the earth. The alien seems excited to know that it can use the Earth-originated ChatGPT.</p>
     </div>
 
     <div class="content">
@@ -572,15 +579,18 @@
       </script>
   
   
-        <div class="flourish-embed flourish-survey" data-src="visualisation/18798514?674590"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
         <p>🙋‍♂️Note: <br>According to a research by Suraj Karakulath which uses Natural Language Processing and text analysis, ChatGPT has left-leaning bias to political questions. The questions range from immigration to marijuana, and 18 out of 34 questions are labeld as leftist. </p>
         <p>👾Impression: <br>Hmmmm ChatGPT answers to various themes, but it seems that we still need to carefully examine the content of its answers.</p>
         <hr>
         <h2>Who are the main players in the race to develop generative AI?</h2>
         <br>
-        <p></p>
-
+        <p>The Q&A with aliens showed that chatgpt is still under development. However, according to <a href="https://news.bloomberglaw.com/artificial-intelligence/openai-doubles-annualized-revenue-to-3-4-billion-information" target="_blank">Bloomberg</a>, US-based OpenAI, the operator of ChatGPT is expected to earn 3.4billion dollars this year.  As the perfection of generative AI increases, sales revenues are likely to increase further.</p>
+        <br>
+        <p>According to <a href="https://eto.tech/dataset-docs/private-sector-ai-indicators/#patents" target="_blank">Emerging Technology Observatory</a>, the U.S. also leads in the number of AI-related patents, ahead of China.  Chinese companies, including Bytedance and Huawei, are also devoting significant resources to the new technology.  The gap with the third place and below is large, and it seems that people around the world will continue to rely on generative AI originating from these two super powers.</p>
         <iframe src='https://flo.uri.sh/visualisation/18786676/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+        <div class="dot-dash-line"></div>
+        <h4><a href="https://github.com/masashiijichi/lede-project-02-website" target="_blank">Link</a> to my Github repository to see sources and methodology</h44>
+
     
         
        
@@ -672,6 +682,7 @@
             function openLightbox(src) {
                 var lightbox = document.getElementById('lightbox');
                 var lightboxImg = document.getElementById('lightbox-img');
+                var lightboxClose = document.querySelector('.lightbox-close');
                 lightboxImg.src = src;
                 lightbox.style.display = "block";
             }
