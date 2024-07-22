@@ -98,8 +98,24 @@ html, body {
     border-radius: 2px;
 }
 
-svg {
-    position: absolute;
-    width: 0;
-    height: 0;
+
+.bubble {
+    stroke: #fff; /* White stroke for better visibility */
+    stroke-width: 1px;
 }
+.legend {
+    font-size: 14px;
+    fill: #fff; /* White text for better visibility */
+}
+.title, .subtitle {
+    fill: #fff; /* White text for better visibility */
+}
+.footnote {
+    fill: gray; /* Gray text for footnote */
+}
+.footnote-link {
+    fill: #1E90FF; /* Link color */
+    
+}
+
+
