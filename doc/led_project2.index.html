@@ -218,6 +218,8 @@
         .trends-widget-container {
             position: relative;
             background-color: black;
+            overflow: hidden; /* Prevent overflow */
+
             padding: 10px;
             width: 100%;
             height: 500px; /* Set a height to ensure the iframe displays properly */
@@ -598,7 +600,7 @@
     // Add footnote
     svg.append("text")
         .attr("x", width / 2)  // Centered at the bottom
-        .attr("y", height * 0.9)
+        .attr("y", height * 0.87)
         .attr("text-anchor", "middle")  // Center the text
         .attr("class", "footnote")
         .style("font-size", `${Math.min(width, height) * 0.015}px`)
