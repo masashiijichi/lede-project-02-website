@@ -502,8 +502,8 @@
                   {"Label_str": "Left", "value": 1}
               ];
   
-              const width = 800;
-              const height = 700;
+              const width = document.querySelector('.svg-container').clientWidth;
+              const height = document.querySelector('.svg-container').clientHeight;
               const bubbleSize = 30;
   
               const svg = d3.select("#bubble-chart")
