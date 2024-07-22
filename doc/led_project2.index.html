@@ -330,6 +330,25 @@
             height: 2px;
             margin: 2em 0;
         }
+        .svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .svg-container {
+        height: auto; /* Allow the container to adjust height on mobile */
+        padding: 1em; /* Optional padding on mobile for spacing */
+    }
+    
+    #bubble-chart {
+        width: 100%;
+        height: auto;
+    }}
 
     </style>
 
@@ -458,7 +477,9 @@
         <p>👾Impression: <br>I learned that there are many races of people of all genders, but I wonder if there are only a limited number of races working on the planet, mostly men. And maybe they are required to grow a beard.</p>
         <br>
         <p>👾Question: <br>But wait, maybe ChatGPT has not learned enough yet. Even on my planet I had a hard time at first because the bias was so bad, let's analyze the AI's answers.</p>
-        <svg id="bubble-chart" width="800" height="700" style="background: black;"></svg>
+        <div class="svg-container">
+
+        <svg id="bubble-chart" width="800" height="700" style="background: black;"></svg></div>
         <script src="js/d3.v7.min.js"></script> <!-- Updated to local file reference -->
       
   
