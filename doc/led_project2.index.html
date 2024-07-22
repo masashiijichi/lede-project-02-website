@@ -521,7 +521,7 @@
     const bubbleData = data.map((d, i) => ({
         ...d,
         x: Math.random() * (width - bubbleSize * 2) + bubbleSize,
-        y: Math.random() * (height - bubbleSize * 2) + bubbleSize
+        y: Math.random() * (height - bubbleSize * 3) + bubbleSize
     }));
 
     const radiusScale = d3.scaleOrdinal()
@@ -530,7 +530,7 @@
 
     const simulation = d3.forceSimulation(bubbleData)
         .force("x", d3.forceX(d => width / 2))
-        .force("y", d3.forceY(d => height / 2 - bubbleSize)) // Adjusted to avoid clipping
+        .force("y", d3.forceY(d => height / 2 - bubbleSize*1.5)) // Adjusted to avoid clipping
         .force("collide", d3.forceCollide(bubbleSize + 1))
         .force("radial", d3.forceRadial(d => radiusScale(d.Label_str), width / 2, height / 2).strength(1))
         .alphaDecay(0.2) // Slower decay for slower movement
