@@ -574,7 +574,7 @@
         .data(legendData)
         .enter().append("g")
         .attr("class", "legend")
-        .attr("transform", (d, i) => `translate(${width - 150}, ${i * 30 + height * 0.15})`);
+        .attr("transform", (d, i) => `translate(${width * 0.75}, ${i * 30 + height * 0.15})`);
 
     legend.append("rect")
         .attr("x", 0)
