@@ -104,18 +104,29 @@ html, body {
     stroke-width: 1px;
 }
 .legend {
-    font-size: 14px;
+    font-size: 20px;
     fill: #fff; /* White text for better visibility */
 }
-.title, .subtitle {
+.title {
+    font-size: 36px; /* Increased font size for title */
     fill: #fff; /* White text for better visibility */
+}
+.subtitle {
+    font-size: 24px; /* Increased font size for subtitle */
+    fill: #fff; /* White text for better visibility */
+}
+.footnote {
+    fill: #fff; /* White text for better visibility */
+}
+.footnote-link {
+    fill: #1E90FF; /* Link color */
+    cursor: pointer;
 }
 .footnote {
     fill: gray; /* Gray text for footnote */
 }
 .footnote-link {
     fill: #1E90FF; /* Link color */
-    
+    cursor: pointer;
 }
-
 
