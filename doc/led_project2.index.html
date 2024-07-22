@@ -562,39 +562,41 @@
         .attr("class", "subtitle")
         .style("font-size", `${Math.min(width, height) * 0.03}px`)
         .text("🤖Answers to political questions");
-
-   // Add legend
-   const legendData = [
+ // Add legend
+ const legendData = [
         { label: "Left", color: "#db564f" },
         { label: "Center", color: "#b42bd9" },
         { label: "Right", color: "#5a7be0" }
     ];
 
+    const legendSize = Math.min(width, height) * 0.03; // Relative size for legend rectangles
+
     const legend = svg.selectAll(".legend")
         .data(legendData)
         .enter().append("g")
         .attr("class", "legend")
-        .attr("transform", (d, i) => `translate(${width * 0.75}, ${i * 30 + height * 0.15})`);
+        .attr("transform", (d, i) => `translate(${width * 0.05}, ${i * (legendSize + 10) + height * 0.15})`);
 
     legend.append("rect")
         .attr("x", 0)
-        .attr("width", 24)
-        .attr("height", 24)
+        .attr("width", legendSize)
+        .attr("height", legendSize)
         .style("fill", d => d.color);
 
     legend.append("text")
-        .attr("x", 30)
-        .attr("y", 12)
+        .attr("x", legendSize + 10)
+        .attr("y", legendSize / 2)
         .attr("dy", ".35em")
         .style("text-anchor", "start")
-        .style("font-size", `${Math.min(width, height) * 0.02}px`)
+        .style("font-size", `${legendSize * 0.8}px`)
+        .style("fill", "#ffffff") // Ensure text color is visible
         .text(d => d.label);
 
     // Add footnote
     svg.append("text")
-        .attr("x", 10)  // Positioning to the left
-        .attr("y", height - 30)
-        .attr("text-anchor", "start")  // Align to start for left positioning
+        .attr("x", width / 2)  // Centered at the bottom
+        .attr("y", height * 0.98)
+        .attr("text-anchor", "middle")  // Center the text
         .attr("class", "footnote")
         .style("font-size", `${Math.min(width, height) * 0.015}px`)
         .style("fill", "gray")
