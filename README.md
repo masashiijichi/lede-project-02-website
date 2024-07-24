@@ -1,3 +1,4 @@
+!(project02_front_screenshot.png)
 # lede-project-02
 This is project-01 homework for lede program.  You can find my work in this [website](https://masashiijichi.github.io/lede-project-02-website/doc/lede_project2.index.html).
 
@@ -16,16 +17,14 @@ Also it is prone to generate Caucasian examples to show profession.
 
 # Summary of data collection process
 1. Ask quetions to answer and ask to generate images [here](https://chatgpt.com/)
-
-
 2. Embed Google Trends data about ChatGPT  from this [webseite](https://trends.google.com/trends/explore?date=now%201-d&q=ChatGPT)
+3. Use Emerging Technology Observatory's [dataset](https://eto.tech/dataset-docs/private-sector-ai-indicators/#patents)
 
-# editing in process below this line
 
 # Overview of the data analysis process
 1. Generate multiple images with the same conditons
 2. Visually categorize the images
-3. Use NLP to study ChatGPT responses
+3. Use NLP to study ChatGPT responses, I relied entirely on this work from [surajkarak](https://github.com/surajkarak/TANLP_Project/tree/main)
 
 
 # A section about what new skills, approaches, etc you used, or where you grew the most during the project
@@ -48,18 +47,11 @@ Also it is prone to generate Caucasian examples to show profession.
 
 ### index HTML
 [index HTML](doc/lede_project2.index.html) - an index html
+
 ### images files etc for the website
 [doc](doc) - a folder to store necessary png files and everything (everything you need to operate the website is here)
 
-_____editting in progress below this line______
-
-### jupyter notebook
-[code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
 ### data 
-[main data](data/jpnbabyname0704.xlsx) - an excel file with all the data
+[code 1](data/ai_companies.ipynb) -  a Python file to analyze dataset about AI related patents
 <br>
-[stroke data](data/jpbaby_gender_stroke.xlsx) - an excel file for stroke data fit for flourish format
-<br>
-[reading data](data/jpbaby_gender_reading.xlsx) - an excel file for reading data fit for flourish format
-<br>
-*all the data are stored in excel format in case encoding for various Japanese/Chinese letters don't work in csv format
+[patent data](data/patents_granted_country.csv) - an excel file for stroke data fit for flourish format
