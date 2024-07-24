@@ -1,4 +1,4 @@
-!(project02_front_screenshot.png)
+![Front page of the website](project02_front_screenshot.png)
 # lede-project-02
 This is project-01 homework for lede program.  You can find my work in this [website](https://masashiijichi.github.io/lede-project-02-website/doc/lede_project2.index.html).
 
@@ -54,4 +54,4 @@ Also it is prone to generate Caucasian examples to show profession.
 ### data 
 [code 1](data/ai_companies.ipynb) -  a Python file to analyze dataset about AI related patents
 <br>
-[patent data](data/patents_granted_country.csv) - an excel file for stroke data fit for flourish format
+[patent data](data/patents_granted_country.csv) - a csv file for AI related patent data
